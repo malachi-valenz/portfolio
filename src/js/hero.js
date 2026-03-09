@@ -1,6 +1,7 @@
 // Three.js starfield background for hero section
 
 import * as THREE from 'three' 
+import gsap from 'gsap'
 
 
 export function initHero() {
@@ -43,7 +44,7 @@ export function initHero() {
 
     const starMaterial = new THREE.PointsMaterial({
         color: 0xffffff,
-        size: 0.05,
+        size: 0.4,
         sizeAttenuation: true
     })
 
@@ -53,8 +54,8 @@ export function initHero() {
     // Animation Loop
     function animate() {
         requestAnimationFrame(animate)
-        stars.rotation.y += 0.0003
-        stars.rotation.x += 0.0001
+        stars.rotation.y += 0.0007
+        stars.rotation.x += 0.001
         renderer.render(scene, camera)
     }
 
@@ -66,4 +67,25 @@ export function initHero() {
         camera.updateProjectionMatrix()
         renderer.setSize(window.innerWidth, window.innerHeight)
     })
+
+    const tl = gsap.timeline({ delay: 0.3})
+
+    tl.from('#hero-subtitle', {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    })
+    .from('#hero-name', {
+        y: 50,
+        opacity: 0,
+        duration: 1.2,
+        ease: 'power3.out'
+    }, '-=0.6')
+    .from('#hero-cta', {
+        y: 30,
+        opacity: 0,
+        duration: 1,
+        ease: 'power3.out'
+    }, '-=0.6')
 }

@@ -51,23 +51,6 @@ ul {
 
 
 
-/* Loader */
-#loader {
-    position: fixed;
-    inset: 0;
-    background-color: var(--color-bg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-    display: none; /* Temporary */
-}
-
-/* For rocket animation */
-#rocket-canvas {
-    width: 300px;
-    height: 300px;
-}
 
 
 /*Navbar and Related */
@@ -173,7 +156,7 @@ ul {
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--color-primary);
-    transition: var(--transition);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #hero-cta:hover {
@@ -306,3 +289,4 @@ ul {
     border-color: var(--color-secondary);
     color: var(--color-secondary);
 }
+
