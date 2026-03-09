@@ -1,0 +1,308 @@
+/* Importing tailwindcss after installing using vite */
+
+@import "tailwindcss";
+
+/* Undoing Defaults */
+:root {
+    --color-bg: #05060f;
+    --color-bg-secondary: #0d0e1f;
+    --color-primary: #6c63ff;
+    --color-secondary: #00d4ff;
+    --color-accent: #bd00ff;
+    --color-text: #e8e8f0;
+    --color-text-muted: #6b6b8a;
+
+    --font-sans: 'Space Grotesk', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    --section-padding: 120px 5%;
+
+
+    --transition: all 0.3s ease;
+}
+
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Html, Body, and Link Styling that applies to basically everything */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+/* Loader */
+#loader {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    display: none; /* Temporary */
+}
+
+/* For rocket animation */
+#rocket-canvas {
+    width: 300px;
+    height: 300px;
+}
+
+
+/*Navbar and Related */
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 5%;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+
+#nav-logo {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    letter-spacing: 2px;
+}
+
+
+#nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+#nav-links a {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    transition: var(--transition);
+}
+
+#nav-links a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* Hero Section */ 
+
+#hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+#hero-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+
+#hero-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+
+#hero-name {
+    font-size: clamp(3rem, 8vw, 7rem);
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, var(--color-text) 0%, var(--color-primary) 50%, var(--color-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+#hero-cta {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--color-primary);
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+#hero-cta:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+
+/* About */
+#about {
+    position: relative;
+    padding: var(--section-padding);
+    overflow: hidden;
+}
+
+#about-letters {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    padding: 0 5%;
+    pointer-events: none;
+}
+
+#about-letters span {
+    font-size: clamp(8rem, 20vw, 18rem);
+    font-weight: 700;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(108, 99, 255, 0.15);
+}
+
+
+#about-content {
+    position: relative;
+    z-index: 10;
+    max-width: 600px;
+}
+
+
+#about-content h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+}
+
+
+#about-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-text-muted);
+}
+
+
+/* Certifications */
+#certifications {
+    padding: var(--section-padding);
+    background-color: var(--color-bg-secondary);
+}
+
+#certifications h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+
+#cert-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+
+/* Projects */
+#projects {
+    padding: var(--section-padding);
+}
+
+
+#projects h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+
+/* Contact */
+#contact {
+    padding: var(--section-padding);
+    background-color: var(--color-bg-secondary);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    color: var(--color-text);
+}
+
+#contact-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+
+#contact-links a {
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--color-text-muted);
+    color: var(--color-text-muted);
+    transition: var(--transition);
+}
+
+
+#contact-links a:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}

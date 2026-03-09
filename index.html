@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Accessing fonts, setting viewport, and charset + language-->
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Malachi Valenzuela</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <!--Loading Screen Canvas-->
+    <div id="loader">
+      <canvas id="rocket-canvas"></canvas>
+    </div>
+
+    <!-- Main App Div, Contains Everything Else-->
+    <div id="app">
+
+      <!--Navbar (One Page, Links Everywhere)-->
+      <nav id="navbar">
+        <div id="nav-logo">MV</div>
+        <ul id="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!--Hero Section, Landing Area-->
+      <section id="hero">
+        <canvas id="hero-canvas"></canvas>
+        <div id="hero-content">
+          <p id="hero-subtitle">CS Developer & Game Developer</p>
+          <h1 id="hero-name">Malachi Valenzuela</h1>
+          <a href="#projects" id="hero-cta">View My Work</a>
+        </div>
+      </section>
+
+      <!--About Section, Need to fill out bio here-->
+      <section id="about">
+        <div id="about-letters">
+          <span>M</span>
+          <span>V</span>
+        </div>
+        <div id="about-content">
+          <h2>About me</h2>
+          <p>My bio goes here.</p>
+        </div>
+      </section>
+
+      <!--Certifications, need to link PNG images of my badges-->
+      <section id="certifications">
+        <h2>Certifications</h2>
+        <div id="cert-grid">
+          <!--Badges here -->
+        </div>
+      </section>
+
+      <!--Projects, Will Link Godot Games Here as well if possible*-->
+      <section id="projects">
+        <h2>Projects</h2>
+        <div id="projects-grid">
+          <!-- Project cards go here-->
+        </div>
+      </section>
+
+      <!--Contact with Info-->
+      <section id="contact">
+        <h2>Let's Connect</h2>
+        <div id="contact-links">
+          <a href="https://github.com/malachi-valenz" target="_blank">GitHub</a>
+          <a href="mailto:malachiv0409@gmail.com">Email</a>
+        </div>
+      </section>
+
+
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
