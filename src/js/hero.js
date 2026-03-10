@@ -42,10 +42,27 @@ export function initHero() {
         new THREE.BufferAttribute(positions, 3)
     )
 
+    const canvas2d = document.createElement('canvas')
+    canvas2d.width = 32
+    canvas2d.height = 32
+    const ctx = canvas2d.getContext('2d')
+    const gradient = ctx.createRadialGradient(16, 16, 0, 16, 16, 16)
+    gradient.addColorStop(0, 'rgba(255, 255, 255, 1')
+    gradient.addColorStop(1, 'rgba(255, 255, 255, 0')
+    ctx.fillStyle = gradient
+    ctx.beginPath()
+    ctx.arc(16, 16, 16, 0, Math.PI * 2)
+    ctx.fill()
+
+    const starTexture = new THREE.CanvasTexture(canvas2d)
+
     const starMaterial = new THREE.PointsMaterial({
         color: 0xffffff,
-        size: 0.4,
-        sizeAttenuation: true
+        size: 0.95,
+        sizeAttenuation: true,
+        map: starTexture,
+        transparent: true,
+        alphaTest: 0.01
     })
 
     const stars = new THREE.Points(starGeometry, starMaterial)

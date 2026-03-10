@@ -167,35 +167,17 @@ ul {
 
 /* About */
 #about {
-    position: relative;
     padding: var(--section-padding);
-    overflow: hidden;
-}
-
-#about-letters {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    gap: 2rem;
-    padding: 0 5%;
-    pointer-events: none;
-}
-
-#about-letters span {
-    font-size: clamp(8rem, 20vw, 18rem);
-    font-weight: 700;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 1px rgba(108, 99, 255, 0.15);
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    margin: 0;
 }
 
 
 #about-content {
     position: relative;
     z-index: 10;
-    max-width: 600px;
 }
 
 
@@ -203,13 +185,25 @@ ul {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 1.5rem;
     color: var(--color-text);
+    position: relative;
+    display: inline-block;
+}
+
+#about-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }
 
 
 #about-content p {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: var(--color-text-muted);
+    color: var(--color-text);
 }
 
 
