@@ -282,6 +282,18 @@ ul {
     font-size: clamp(2rem, 4vw, 3rem);
     margin-bottom: 3rem;
     color: var(--color-text);
+    position: relative;
+    display: inline-block;
+}
+
+#projects h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
 }
 
 
@@ -291,7 +303,83 @@ ul {
     gap: 2rem;
 }
 
+.project-card {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    transition: border-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
 
+.project-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.project-card-accent {
+    height: 3px;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-accent));
+}
+
+.project-card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    flex: 1;
+}
+
+.project-genre {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+}
+
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+    flex: 1;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.project-platform {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.project-btn {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.6rem 1.5rem;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.project-btn:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
 /* Contact */
 #contact {
     padding: var(--section-padding);
