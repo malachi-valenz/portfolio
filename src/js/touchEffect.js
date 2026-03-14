@@ -3,7 +3,9 @@ import gsap from 'gsap'
 export function initTouchEffect() {
     if (!('ontouchstart' in window || navigator.maxTouchPoints > 0)) return
 
-    alert('Under Construction! Welcome! Feel free to look around!')
+    document.addEventListener('touchstart', (e) => {
+        alert('tap detected')
+    })
 
     document.addEventListener('touchstart', (e) => {
         e.preventDefault()
