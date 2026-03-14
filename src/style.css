@@ -520,3 +520,14 @@ ul {
         display: flex;
     }
 }
+
+#scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    width: 0%;
+    background: linear-gradient(to right, var(--color-primary), var(--color-secondary));
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
