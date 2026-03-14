@@ -4,7 +4,9 @@ export function initTouchEffect() {
     if (!('ontouchstart' in window || navigator.maxTouchPoints > 0)) return
 
     document.addEventListener('touchstart', (e) => {
-        const touch = e.touches[0]
+        e.preventDefault()
+
+        const touch = e.changedTouches[0]
         const ripple = document.createElement('div')
         ripple.classList.add('touch-ripple')
 
