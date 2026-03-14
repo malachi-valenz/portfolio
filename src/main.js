@@ -1,7 +1,7 @@
 import './style.css'
 import { initNav } from './js/nav.js'
 import { initHero } from './js/hero.js'
-import { initAbout } from './js/about.js'
+import { initAnimations } from './js/animations.js'
 import { initScrollProgress } from './js/scrollProgress.js'
 
 
@@ -9,6 +9,6 @@ import { initScrollProgress } from './js/scrollProgress.js'
 document.addEventListener('DOMContentLoaded', () => {
     initNav()
     initHero()
-    initAbout()
+    initAnimations()
     initScrollProgress()
 })
