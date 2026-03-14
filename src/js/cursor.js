@@ -3,7 +3,7 @@ import gsap from 'gsap'
 
 export function initCursor() {
 
-    if (!window.matchMedia('(hover: hover)').matches) return
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) return
 
     const dot = document.querySelector('#cursor-dot')
     const ring = document.querySelector('#cursor-ring')
