@@ -529,3 +529,24 @@ ul {
     z-index: 9999;
     transition: width 0.1s ease;
 }
+
+
+#footer {
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1 px solid rgba(108, 99, 255, 0.1);
+    background-color: var(--color-bg);
+}
+
+#footer p {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+}
+
+#footer span {
+    color: var(--color-primary);
+}

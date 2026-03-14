@@ -11,4 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initHero()
     initAnimations()
     initScrollProgress()
+
+    document.querySelector('#footer-year').textContent = '©' + new Date().getFullYear()
 })
