@@ -517,6 +517,11 @@ ul {
     #hamburger {
         display: flex;
     }
+
+    #cursor-dot,
+    #cursor-ring {
+        display: none !important;
+    }
 }
 
 #scroll-progress {
