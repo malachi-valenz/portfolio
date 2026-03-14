@@ -2,6 +2,9 @@ import gsap from 'gsap'
 
 
 export function initCursor() {
+
+    if (!window.matchMedia('(hover: hover)').matches) return
+
     const dot = document.querySelector('#cursor-dot')
     const ring = document.querySelector('#cursor-ring')
 
