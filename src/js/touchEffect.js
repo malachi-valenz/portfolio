@@ -3,6 +3,8 @@ import gsap from 'gsap'
 export function initTouchEffect() {
     if (!('ontouchstart' in window || navigator.maxTouchPoints > 0)) return
 
+    alert('touch effect initialized')
+
     document.addEventListener('touchstart', (e) => {
         e.preventDefault()
 
