@@ -587,13 +587,13 @@ ul {
 .touch-ripple {
     position: fixed;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
     background: radial-gradient(circle, var(--color-primary) 0%, transparent 70%);
     pointer-events: none;
     z-index: 99998;
-    transform: translate(-50%, -50%) scale(0);
-    opacity: 0.8;
+    transform: translate(-50%, -50%);
+    opacity: 1;
 }
 
 #music-player {
