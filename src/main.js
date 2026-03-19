@@ -6,7 +6,7 @@ import { initScrollProgress } from './js/scrollProgress.js'
 import { initCursor } from './js/cursor.js'
 import { initTouchEffect } from './js/touchEffect.js'
 import { initMusic } from './js/music.js'
-
+import { initSpamDemo } from './js/spamDemo.js'
 
 // Initialize once DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initCursor()
     initTouchEffect()
     initMusic()
+    initSpamDemo()
 
     document.querySelector('#footer-year').textContent = '©' + new Date().getFullYear()
 })

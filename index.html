@@ -124,6 +124,20 @@
               </div>
             </div>
           </div>
+          <div class="project-card" id="spam-card">
+            <div class="project-card-accent"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <span class="project-genre"> Machine Learning - NLP</span>
+              </div>
+              <h3 class="project-title">Spam Classifier</h3>
+              <p class="project-description">A Naive Bayes classifier trained on 5,500+ SMS messages that detects spam with 98& accuracy using Natural Language Processing.</p>
+              <div class="project-footer">
+                <span class="project-platform">Python / Flask</span>
+                <button class="project-btn" id="demo-btn">Demo</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -136,6 +150,19 @@
           <a href="mailto:malachi@malachivalenzuela.com">Email</a>
         </div>
       </section>
+    
+      <div id="demo-modal">
+        <div id="demo-modal-content">
+          <button id="demo-close">X</button>
+          <h3>Spam Classifier</h3>
+          <p>Type a message to test the model (May take a minute or two, upgrading my backend) </p>
+          <textarea id="demo-input" placeholder="Enter a message..."></textarea>
+          <div id="demo-actions">
+            <button id="demo-submit">Classify</button>
+            <a href="https://github.com/malachi-valenz/Spam-Classifier-Basic" target="_blank" id="demo-repo-btn">View Code</a>
+          </div>
+          <div id="demo-result"></div>
+      </div>
     </div>
 
     <footer id="footer">

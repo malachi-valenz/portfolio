@@ -627,3 +627,142 @@ ul {
     height: 44px;
     border-radius: 50%;
 }
+
+#demo-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(5, 6, 15, 0.85);
+    backdrop-filter: blur(10px);
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+#demo-modal.open {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#demo-modal-content {
+    background: var(--color-bg-secondary);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    padding: 2.5rem;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    position: relative;
+}
+
+#demo-modal-content h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+#demo-modal-content p {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--color-text-muted);
+}
+
+#demo-input {
+    background: var(--color-bg);
+    border: 1px solid rgba(108, 99, 255, 0.2);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    padding: 1rem;
+    resize: none;
+    height: 120px;
+    transition: border-color 0.3s ease;
+}
+
+#demo-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+#demo-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+#demo-actions #demo-submit {
+    flex: 1;
+}
+
+#demo-repo-btn {
+    font: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--color-text-muted);
+    color: var(--color-text-muted);
+    transition: border-color 0.3s ease, color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#demo-repo-btn:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+#demo-submit {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.8rem;
+    border: 1px solid var(--color-primary);
+    background: transparent;
+    color: var(--color-primary);
+    cursor: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#demo-submit:hover {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+#demo-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    cursor: none;
+    transition: color 0.3s ease;
+}
+
+#demo-close:hover {
+    color: var(--color-text);
+}
+
+#demo-result {
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    min-height: 1.5rem;
+}
+
+#demo-result.spam {
+    color: #ff4d6d;
+}
+
+#demo-result.ham {
+    color: var(--color-secondary);
+}
