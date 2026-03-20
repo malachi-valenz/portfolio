@@ -16,13 +16,13 @@
     <meta property="og:description" content="The personal site of Malachi Valenzuela - Computer Science Developer & Student"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="https://malachivalenzuela.com"/>
-    <meta property="og:image" content="https://malachivalenzuela.com/malachi-valenzuela-og.png"-->
+    <meta property="og:image" content="https://malachivalenzuela.com/malachi-valenzuela-og.png"/>
 
     <!--Twitter/X Card-->
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:title" content="Malachi Valenzuela"/>
     <meta name="twitter:description" content="The personal site of Malachi Valenzuela - Computer Science Developer & Student"/>
-    <meta name="twitter:image" content="https://malachivalenzuela.com/malachi-valenzuela-og.png"-->
+    <meta name="twitter:image" content="https://malachivalenzuela.com/malachi-valenzuela-og.png"/>
 
 
     <!--Fonts-->
@@ -161,6 +161,20 @@
               </div>
             </div>
           </div>
+          <div class="project-card">
+            <div class="project-card-accent"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <span class="project-genre">Arcade - Local Multiplayer</span>
+              </div>
+              <h3 class="project-title">Pong</h3>
+              <p class="project-description">A classic 2-player pong game built with Python and pygame, compiled to WebAssembly with Pygbag.</p>
+              <div class="project-footer">
+                <span class="project-platform">Python / Pygame</span>
+                <button class="project-btn" id="pong-btn">Play</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -185,6 +199,15 @@
             <a href="https://github.com/malachi-valenz/Spam-Classifier-Basic" target="_blank" id="demo-repo-btn">View Code</a>
           </div>
           <div id="demo-result"></div>
+        </div>
+      </div>
+      <div id="pong-modal">
+        <div id="pong-modal-content">
+          <button id="pong-close">X</button>
+          <h3>Pong</h3>
+          <iframe src="https://malachi-valenz.github.io/pong-game" width="1280" height="720"
+            style="border:none; transform: scale(0.6); transform-origin: top left;">
+          </iframe>
         </div>
       </div>
 
