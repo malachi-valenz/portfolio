@@ -8,6 +8,7 @@ import { initTouchEffect } from './js/touchEffect.js'
 import { initMusic } from './js/music.js'
 import { initSpamDemo } from './js/spamDemo.js'
 import { initPongDemo } from './js/pongDemo.js'
+import { initHashCracker } from './js/hashCracker.js'
 
 // Initialize once DOM is fully loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMusic()
     initSpamDemo()
     initPongDemo()
+    initHashCracker()
 
     document.querySelector('#footer-year').textContent = '©' + new Date().getFullYear()
 })

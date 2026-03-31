@@ -184,6 +184,20 @@
               </div>
             </div>
           </div>
+          <div class="project-card">
+            <div class="project-card-accent"></div>
+            <div class="project-card-content">
+              <div class="project-header">
+                <span class="project-genre">Cybersecurity - Offensive Tools</span>
+              </div>
+              <h3 class="project-title">Hash Cracker</h3>
+              <p class="project-description">A dictionary and brute-force hash cracker written in C++, compiled to WebAssembly</p>
+              <div class="project-footer">
+                <span class="project-platfrom">C++ / WebAssembly</span>
+                <button class="project-btn" id="hashcracker-btn">Demo</button>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -217,6 +231,27 @@
           <iframe src="https://malachi-valenz.github.io/pong-game" width="1280" height="720"
             style="border:none; transform: scale(0.6); transform-origin: top left;">
           </iframe>
+        </div>
+      </div>
+      <div id="hashcracker-modal">
+        <div id="hashcracker-modal-content">
+          <button id="hashcracker-close">X</button>
+          <h3>Hash Cracker</h3>
+          <p>Enter an MD5 or SHA-256 hash to crack it using a dictionary or brute force attack (Be advised, brute force attack times go up expontentially).</p>
+          <input id="hashcracker-input" type="text" placeholder="Enter hash..."/>
+          <select id="hashcracker-algo">
+            <option value="md5">MD5</option>
+            <option value="sha256">SHA-256</option>
+          </select>
+          <select id="hashcracker-mode">
+            <option value="dictionary">Dictionary Attack</option>
+            <option value="brute">Brute Force (max 4 chars)</option>
+          </select>
+          <div id="hashcracker-actions">
+            <a href="https://github.com/malachi-valenz/hash-cracker-cplusplus" target="_blank" id="hashcracker-repo-btn">Github</a>
+            <button id="hashcracker-submit">Crack</button>
+          </div>
+          <p id="hashcracker-result"></p>
         </div>
       </div>
 
